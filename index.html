@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PUNTO #3</title>
+</head>
+<body onmousemove="position(event)">
+
+<div id="mousePositions"></div>
+<div id="hola2"	class="no"><center><br>EL MOUSE ESTA FUERA <br>DEL CUADRO</center> </div>
+<div id="hola"	class="lola"><center><br>EL MOUSE ESTA DENTRO <br>DEL CUADRO</center> </div>
+
+<script>
+
+function position(event){
+
+var n1=document.getElementById('hola');
+var n2=document.getElementById('hola2');
+	var x = event.clientX;
+	var y = event.clientY;
+
+	var mousePositions = document.getElementById('mousePositions');
+
+
+
+if(x>410&&x<953&&y>191&&y<445)
+{
+	console.log("llegue");
+	n2.className="nod";
+	n1.className="lolo";
+}
+else
+{
+	n1.className="lola";
+	n2.className="no";
+}
+}
+
+
+</script>
+
+
+
+
+
+
+</body>
+
+</html>
+
+<style type="text/css">
+
+#mousePositions{
+
+	
+	color:#000000;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	height:300px;
+	overflow:auto;
+	width:150px;
+				}
+.lola{
+display:none;
+		}
+
+.lolo{ 
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	width: 40%;
+	height: 40%;
+	background: black;
+		color:white;
+	font-family: fantasy;
+	font-style: italic;
+	font-size:300%; 
+	border: solid red 3px;
+	}
+
+	.no{
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	width: 40%;
+	height: 40%;
+	background: white;
+	border: solid black 3px;
+	color:red;
+	font-family: fantasy;
+	font-style: italic;
+	font-size:300%; 
+	}
+
+	.nod{
+		display:none;
+	}
+
